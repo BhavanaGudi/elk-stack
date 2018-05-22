@@ -1,0 +1,34 @@
+version: '3'
+services:
+  elasticsearch:
+    image: elasticsearch
+    container_name: elasticsearch
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    networks:
+      - mynet
+  kibana:
+    image: kibana
+    container_name: kibana
+    ports:
+      - "5601:5601"
+    networks:
+      - mynet
+    depends_on: 
+      - elasticsearch
+  logstash:
+    image: logstash_local
+    container_name: logstash
+    networks:
+      - mynet
+  tomcat:
+    image: tomcat_local
+    container_name: tomcat
+    networks:
+      - mynet
+    ports:
+      - "8085:8080"
+networks:
+  mynet:
+    external: yes  
