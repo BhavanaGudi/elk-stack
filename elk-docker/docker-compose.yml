@@ -28,7 +28,7 @@ services:
     networks:
       - mynet
     ports:
-      - "8085:8080"
+      - "8080:8080"
 networks:
   mynet:
     external: yes  

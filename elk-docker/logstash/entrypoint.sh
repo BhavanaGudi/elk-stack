@@ -1,3 +1,4 @@
 #!/bin/bash
 ./logstash-plugin update logstash-input-beats
-./logstash -f logstash.conf
+./bin/plugin install logstash-input-beats
+./logstash -f /config.dir/logstash.conf

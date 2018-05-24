@@ -1,4 +1,4 @@
 FROM logstash
+COPY logstash.conf  logstash2.conf entrypoint.sh /config.dir/
 WORKDIR /usr/share/logstash/bin
-COPY logstash.conf  entrypoint.sh ./
-CMD ["entrypoint.sh","run"]
+CMD ["/config.dir/entrypoint.sh","run"]

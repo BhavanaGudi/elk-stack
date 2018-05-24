@@ -20,7 +20,7 @@ filebeat.prospectors:
   # Paths that should be crawled and fetched. Glob based paths.
   paths:
     #- /var/log/*.log
-    - /usr/local/tomcat/logs/localhost_access_logs.2018-05-22.txt
+    - /usr/local/tomcat/logs/localhost_access_logs*
     #- c:\programdata\elasticsearch\logs\*
 
   # Exclude lines. A list of regular expressions to match. It drops the lines that are
