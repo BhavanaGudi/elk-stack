@@ -1,4 +1,2 @@
-FROM logstash
-COPY logstash.conf  logstash2.conf entrypoint.sh /config.dir/
-WORKDIR /usr/share/logstash/bin
-CMD ["/config.dir/entrypoint.sh","run"]
+FROM docker.elastic.co/logstash/logstash:6.2.4
+COPY logstash.conf /usr/share/logstash/pipeline/
