@@ -1,0 +1,13 @@
+{ "component":
+    {"id":"AWQRmrpWJM8QqNoiuqoy",
+     "key":"org.springframework.samples:spring-petclinic",
+     "name":"petclinic",
+     "qualifier":"TRK",
+     "measures":
+                {"complexity":"56069",
+                 "violations":"24869",
+                 "vulnerabilities":"32",
+                 "bugs":"421",
+                }
+}
+}

@@ -11,7 +11,7 @@ services:
     environment:
       - discovery.type=single-node
   kibana:
-    image: docker.elastic.co/kibana/kibana:6.2.4
+    image: kibana_local
     container_name: kibana
     ports:
       - "5601:5601"
@@ -36,14 +36,6 @@ services:
       - mynet
     ports:
       - "8080:8080"
-  nginx:
-    image: nginx_local
-    hostname: nginx
-    container_name: nginx
-    networks:
-      - mynet
-    ports: 
-      - "80:80"
 networks:
   mynet:
     external: yes  
