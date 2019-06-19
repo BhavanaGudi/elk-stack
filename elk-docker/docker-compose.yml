@@ -36,6 +36,14 @@ services:
       - mynet
     ports:
       - "8080:8080"
+  nginx:
+    image: nginx_local
+    hostname: nginx
+    container_name: nginx
+    networks:
+      - mynet
+    ports:
+      - "8080:8080"
 networks:
   mynet:
     external: yes  
